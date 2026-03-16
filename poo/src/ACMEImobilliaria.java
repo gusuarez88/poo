@@ -38,6 +38,9 @@ public class ACMEImobilliaria {
                 case 3:
                     listarTodasCasas();
                     break;
+                case 4:
+                    alteraValor();
+                    break;
                 case 99:
                     easterEgg();
                     break;
@@ -57,6 +60,7 @@ public class ACMEImobilliaria {
         System.out.println("[1] Cadastrar uma casa");
         System.out.println("[2] Consultar uma casa");
         System.out.println("[3] Listar todas as casas");
+        System.out.println("[4] Alterar o valor de uma casa");
     }
 
     /**
@@ -134,5 +138,16 @@ public class ACMEImobilliaria {
         casa = new Casa(444, 444.44, "Rua Quatro");
         condominio.cadastrarCasa(casa);
     }
+
+private void alteraValor ()
+{
+    listarTodasCasas();
+    System.out.println("Qual casa voce quer alterar (posição no array)");
+    int pos =entrada.nextInt();
+    System.out.println("Qual o novo valor?");
+    double valor = entrada.nextDouble();
+
+    condominio.mudarValorCasa(valor, pos);
+}
 
 }

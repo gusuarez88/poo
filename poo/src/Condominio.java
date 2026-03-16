@@ -37,4 +37,15 @@ public class Condominio {
         }
         return aux;
     }
+
+public void mudarValorCasa(double valor,int posCasa)
+{
+    for(int i=0; i<casas.size();i++)
+    {
+        if(posCasa==i)
+        {
+            casas.get(i).setValor(valor);
+        }
+    }
+}
 }
